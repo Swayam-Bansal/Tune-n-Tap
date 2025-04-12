@@ -1,8 +1,8 @@
 import cv2
-import detection
+import detection as detection
 
 def main():
-    window = cv2.VideoCapture(1)
+    window = cv2.VideoCapture(0)
 
     # Uncomment the following lines to set the camera resolution
     # window.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
