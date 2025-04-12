@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# folders in the project root, such as loading models 
+models/
+
 # C extensions
 *.so
 
