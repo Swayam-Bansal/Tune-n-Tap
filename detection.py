@@ -10,13 +10,15 @@ import numpy as np
 mp_hands = mp.solutions.hands
 mp_drawing = mp.solutions.drawing_utils
 
+# Load the hands detection model in mediapipe
 hands = mp_hands.Hands(
     static_image_mode=False,
     max_num_hands=2,
     min_detection_confidence=0.5,
-    min_tracking_confidence=0.5,
+    min_tracking_confidence=0.2,
 )
 
+# draw the hands tracing landmarks on the live feed
 def draw_landmarks(image: MatLike, hand_landmarks: mp_hands.HandLandmark):
     # Draw the hand annotations on the image.
     mp_drawing.draw_landmarks(
